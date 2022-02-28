@@ -1,6 +1,10 @@
 <template>
   <div class="login">
-    <h1>Holaaa login</h1>
+    <h1>
+      Inicio de sesión</h1>
+    <p>
+
+    </p>
     <Formulario />
   </div>
 </template>

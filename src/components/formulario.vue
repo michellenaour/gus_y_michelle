@@ -1,39 +1,31 @@
 <template>
  <div>
-   <h1>{{mono}}</h1>
-   <h1>{{msg}}</h1>
-    <v-form
-  
-      lazy-validation>
+    <v-alert color="red" elevation="2" type="error" v-if="msgerror"> usuario o contraseña incorrecta</v-alert>
+    <v-form>
 
     <v-container>
-      <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          md="3"
-        >
+      <v-row >
+       <v-col cols="2" align="center" justify="center"></v-col>
+         <v-col cols="4" align="center" justify="center">
         <v-text-field
-            label="Usuario"
+            label="Usuario :)"
             outlined
             v-model="user"
             
           ></v-text-field>
-        </v-col>
-          <v-col
-          cols="12"
-          sm="6"
-          md="3"
-        >
+        </v-col >
+     
+          <v-col cols="4" align="center" justify="center">
+           
+        
         <v-text-field
          v-model="pass"
             label="Contraseña :)"
             outlined
-          
           ></v-text-field>
         </v-col>
         <v-col cols="12" align="center" justify="center">
-        <v-btn  color="success" @click="guardar">acceder</v-btn>
+        <v-btn  color = "#deafc4" @click="guardar">acceder</v-btn>
       </v-col>
 
       </v-row>
@@ -48,7 +40,7 @@
       return {
         user: '',
         pass: '',
-        msg:''
+        msgerror:false
       }
     },
     methods: {
@@ -59,7 +51,7 @@
               name: 'page1',
             });
            }else{
-             this.msg='usuario o contraseña incorrecta';
+             this.msgerror=true;
            }
          });
       },

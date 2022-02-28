@@ -1,12 +1,15 @@
 <template>
+ <v-app>
   <div class="home">
     
      <div id="nav">
-      <router-link to="/page1">pag 1</router-link> | 
+      <router-link to="/page1">feliz cum</router-link> | 
+       <router-link to="/page2">proximamente</router-link> | 
     </div>
     <router-view/>
      <Hola/>
   </div>
+   </v-app>
 </template>
 
 <script>
