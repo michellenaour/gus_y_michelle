@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/vue-pages/',
+  publicPath: '/gus_y_michelle/',
   transpileDependencies: [
     'vuetify'
   ]
